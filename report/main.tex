@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Masters/Doctoral Thesis 
+% Bachelor Thesis 
 % LaTeX Template
 % Version 2.5 (27/8/17)
 %
@@ -42,14 +42,14 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage{mathpazo} % Use the Palatino font by default
 
-\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA) 
+
+\addbibresource{example.bib} % The filename of the bibliography
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
 \usepackage{pgfgantt} % in order ot create the Gantt Chart
 \usepackage{wrapfig}
 
-\addbibresource{example.bib} % The filename of the bibliography
-
-\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -149,7 +149,28 @@ headsepline, % Uncomment to get a line under the header
 
 \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 
-% \textbf{SVM} & \textbf{S}upport \textbf{V}ector \textbf{M}achine\\
+\textbf{CEO} 		& \textbf{C}hief \textbf{E}xecutive \textbf{O}fficer\\
+\textbf{SMT} 		& \textbf{S}enior \textbf{M}anagement \textbf{T}eam\\
+\textbf{B2B} 		& \textbf{B}usiness To \textbf{B}usiness\\
+\textbf{B2C} 		& \textbf{B}usiness To \textbf{C}ustomer\\
+\textbf{CX} 		& \textbf{C}ustomer \textbf{E}xperience\\
+\textbf{DOM} 		& \textbf{D}ocument \textbf{O}bject \textbf{M}odel\\
+\textbf{HTML}		& \textbf{H}yper \textbf{T}ext \textbf{M}arkup \textbf{L}anguage\\
+\textbf{JSON}		& \textbf{J}avaScript \textbf{O}bject \textbf{N}otation\\
+\textbf{RPC}        & \textbf{R}emote \textbf{P}rocedure \textbf{C}all \\
+\textbf{SPA} 		& \textbf{S}ingle \textbf{P}age \textbf{A}pplication\\
+\textbf{UI} 		& \textbf{U}ser \textbf{I}nterface\\
+\textbf{URI} 		& \textbf{U}niform \textbf{Resource} \textbf{I}dentifier \\
+\textbf{REST} 		& \textbf{R}epresentational \textbf{S}tate \textbf{T}ransfer \\
+\textbf{MVC} 		& \textbf{M}odel \textbf{V}iew \textbf{C}ontroller \\
+\textbf{A}jax		& \textbf{A}synchronous \textbf{J}avaScript \textbf{A}nd \textbf{X}ML\\
+\textbf{Framework}	& Reusable software environment to build applications.\\
+\textbf{JavaScript} & High-level programming language.\\
+\textbf{TypeScript} & Superset of JavaScript which adds optional typing to JavaScript.\\
+\textbf{Angular} 	& JavaScript framework maintained by Google.\\
+\textbf{React} 		& JavaScript library maintained by Facebook. \\
+\textbf{Node.js} 	& Run-time environment for server-side JavaScript.\\
+\textbf{NPM}  		& Package manager for Node.js modules. \\
 
 \end{abbreviations}
 
@@ -179,14 +200,14 @@ headsepline, % Uncomment to get a line under the header
 \include{Chapters/PartB/Chapter3}
 \include{Chapters/PartB/Chapter4} 
 \include{Chapters/PartB/Chapter5} 
-\include{Chapters/PartB/Chapter6} 
-\include{Chapters/PartB/Chapter7}
+\include{Chapters/PartB/Chapter6}
+
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\printbibliography[heading=bibintoc]
+\printbibliography[title={References}]
 
 %----------------------------------------------------------------------------------------
 

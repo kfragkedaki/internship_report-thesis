@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Masters/Doctoral Thesis 
+% Bachelor Thesis 
 % Class File
 % Version 1.6 (27/8/17)
 %
@@ -26,7 +26,7 @@
 %----------------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
-\newcommand{\classname}{MastersDoctoralThesis}
+\newcommand{\classname}{BachelorThesis}
 \ProvidesClass{\classname}[2017/08/27 v1.6 LaTeXTemplates.com]
 \providecommand{\baseclass}{book}
 \RequirePackage{etoolbox}
