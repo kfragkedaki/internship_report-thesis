@@ -50,6 +50,7 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{pgfgantt} % in order ot create the Gantt Chart
 \usepackage{wrapfig}
 \usepackage{subfig}
+\usepackage{float} 
 
 
 %----------------------------------------------------------------------------------------
@@ -186,15 +187,6 @@ headsepline, % Uncomment to get a line under the header
 
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
-\part{Internship Report}
-\include{Chapters/PartA/Chapter1}
-\include{Chapters/PartA/Chapter2} 
-\include{Chapters/PartA/Chapter3}
-\include{Chapters/PartA/Chapter4} 
-\include{Chapters/PartA/Chapter5} 
-\include{Chapters/PartA/Chapter6}
-
-\addtocontents{toc}{\protect\newpage}
 
 \part{Thesis}
 \include{Chapters/PartB/Chapter1}
@@ -203,6 +195,16 @@ headsepline, % Uncomment to get a line under the header
 \include{Chapters/PartB/Chapter4} 
 \include{Chapters/PartB/Chapter5} 
 \include{Chapters/PartB/Chapter6}
+
+\addtocontents{toc}{\protect\newpage}
+
+\part{Internship Report}
+\include{Chapters/PartA/Chapter1}
+\include{Chapters/PartA/Chapter2} 
+\include{Chapters/PartA/Chapter3}
+\include{Chapters/PartA/Chapter4} 
+\include{Chapters/PartA/Chapter5} 
+\include{Chapters/PartA/Chapter6}
 
 
 %----------------------------------------------------------------------------------------
