@@ -7,7 +7,9 @@
 \begin{center}
 	\begin{tabular}{ |p{7cm}|p{3cm}|  }
 		\hline
-		Activity & Duration \\
+		\textbf{Activity} & \textbf{Duration} \\
+		\hline
+		 Getting to know BeatHotel's system, Node.js and React.js &  \\[0.2cm]
 		\hline
 	\end{tabular}
 \end{center}
@@ -16,13 +18,21 @@
 \begin{ganttchart}{1}{14}
 	\gantttitle{Gant Chart}{14} \\
 	\gantttitlelist{1,...,14}{1} \\
-	\ganttgroup{Optimization}{3}{13} \\
-	\ganttbar{Bibliography}{1}{2} \\
-	\ganttlinkedbar{Optimization (Python version)}{3}{7} \ganttnewline
-	\ganttmilestone{Python version}{7} \ganttnewline
-	\ganttlinkedbar{Optimization (C++ version)}{8}{12} \ganttnewline
-	\ganttbar{Report}{13}{14}
+	\ganttbar{Getting to know the system}{1}{2} \ganttnewline
+	\ganttlinkedbar{Price Estimator}{3}{4} \ganttnewline
+	\ganttlinkedbar{Statistics}{5}{7} \ganttnewline
+	\ganttmilestone{Statistics \& Price Estimator Online}{7} \ganttnewline
+	\ganttlinkedbar{Features and Fixes on BeatHotels}{7}{10} \ganttnewline
+	\ganttlinkedbar{Mpaineis-Vgaineis}{11}{11} \ganttnewline
+	\ganttmilestone{Mpaineis-Vgaineis Live}{12} \ganttnewline
+	\ganttlinkedbar{Feature Input Pick up Location}{12}{12} \ganttnewline
+	\ganttlinkedbar{Zoom to Hotel/Driver \& new Maps}{13}{13} \ganttnewline
+	\ganttbar{Restructure Components}{12}{14}
 	\ganttlink{elem2}{elem3}
 	\ganttlink{elem3}{elem4}
 	\ganttlink{elem4}{elem5}
+	\ganttlink{elem5}{elem6}
+	\ganttlink{elem6}{elem7}
+	\ganttlink{elem7}{elem8}
+	\ganttlink{elem8}{elem9}
 \end{ganttchart}

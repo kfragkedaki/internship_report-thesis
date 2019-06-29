@@ -5,24 +5,189 @@
 
 \label{Chapter4}
 
-\section{Project 1}
+\section{Statistics}
 
 \subsection{Description}
+As described in the previous Chapter, "Statistics" project is an external feature in Agent's dashboard that reveals total rides and Gross Merchandise Volume (GMV) gained from BeatHotel service. More specifically, there were added charts in the BeatHotel's web application that present data based on what KPI, resolution, and period of time will be chosen by Agents. The term KPI is referred to either Completed Rides, or GMV, or Cancelled Rides, while term "resolution" applies to yearly, monthly, weekly, daily or even hourly analyses of data. In the chart, it is also compared the given period's data with the previous week's or year's data. \par
 
-\subsection{Best Practices}
+\subsection{Deliverables}
+This project had three main deliverables so as to be completed, npm package creation, customized Statistics and General Statistics. \par
 
-\subsection{Schedule}
+\subsubsection{Npm Package}
+The first deliverable is the creation of an npm package as described at Appendix 8.1, showing the project's ReadME.md file. The package can be used in both front and back-end applications, and it returns one function and two objects, which are the KPI and resolutions object. \par 
+As regards the function, it receives five arguments. The first argument given, named "statsObject", is an object of the gathered data saved in firebase ,BeatHotel's realtime database. The other two arguments are the starting and ending timestamps of the desirable data's period of time, while the remain ones determine the KPI and resolution of the received data. The purpose of this function is to return an object that format data received from database based on its parameters. \par
+For privacy reasons, it is not possible to cite the code written. However, it can be mentioned that code was developed in ES6 JavaScript, consists 303 lines of code, both comments and pure code, and it includes eight functions in total. Moreover, there were created unit tests in Jest and are in total 395 lines examining ten different use cases. Code is using enlist-styling and includes babel in its webpack configuration so as to be used in both front-end and back end projects if it is needed. \par
+
+\subsubsection{Customized Statistics \& Dashboard KPIs}
+After the npm package creation, I had to present the data on the Agent's web application. So, I created and added on tab Dashboard of BeatHotel web page, two customized charts and two more cards that reveals this week's Rides and GMV, as shown in the red square of figure 4.1.   \par
+Regarding the customized charts shown, there is one for showing rides per day and one for GMV. Both charts have two lines. The blue line is created based on the current week's data, while the gray one by last week's. Generally, their purpose is to compare this and last week's rides and GMV. For this reason, a week on week (WoW) percentage is shown at the top left of the charts which is referred to this comparison. Percentage representation is also changing color,from green to red, and arrow's direction, from up to down, if needed. Last but not least, we need to mention that charts are updated on refresh, so the timer down left displays when the data were lastly updated. \par 
+Additionally, I was requested to add two more cards, one for Rides and one for GMV KPI. These cards are referred to data gathered from the beginning of current week (Monday 00:00) until the day and time Agent is using the dashboard. Furthermore, they demonstrate how many Rides or GMV BeatHotel service had the last seven days passed. One last detail about cards is that the color of icons, in the picture shown as green, is changing to either green, orange or red depending on WoW percentage described earlier. \par
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.45]{images/my_projects/Statistics/feature-dashboard-statistics.png}
+	\end{center}
+	\caption{Customized Statistics}
+\end{figure}
+
+In technical detail, there were added 610 and removed 62 lines of code in totally 12 files. More specifically, four main components were created, that are Timer.jsx, RideChart.jsx and DashboardInfo.jsx, DashboardKPIContainer.jsx. The last one was created for abstracting already existing Card's Component and reuse it for developing the new ones in order not to repeat similar code. \par
+
+\subsubsection{General Satistics}
+
+One more aspect of charts are the "General Statistics" where it can be chosen for which KPI or dates you want to receive data. In this sense, there is a dropdown where you can choose the KPI, either GMV, Completed or Canceled Rides, and two inputs one for the starting and one for the ending date of the data displayed. "General Statistics" is basically the same charts as the customized ones, but with the preferred data shown and more functionality into them. \par
+In figure 4.2, it is shown how "General Statistics" look like. However, we need to mention that this project was never completed and fulfilled with a Pull Request on GitHub(PR) because of other priorities. This is the only project that is not currently in production. \par
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.3]{images/my_projects/Statistics/General_Statistics.png}
+	\end{center}
+	\caption{General Statistics Overview}
+\end{figure}
+
+
+\subsection{Best Practices \& Main Tools/Methods Used}
+
+Several tools and practices taught in quite a few courses of Management Science and Technology Department have been used for fulfilling this project's needs. More specifically, JavaScript and other web development tools taught during Information Systems Implementation \& Architecture course of 5th semester, and Internet \& Cloud Application Development course of 7th semester was the most useful knowledge gained. Furthermore, the GitHub usage required for the project was given from 6th semester's course of Software Engineering in Practice.
+
+\subsection{Total Hours spend on the Project}
+
+This project consists of both back and front end implementations, and it has to be mentioned that "Statistics" was one of the first projects in JavaScript and the first one in ReactJS that I had to complete. So, the total working hours spend on the Project were about to 72, with other features and bug fixes running on the same time as shown on Gantt Chart bellow.
+
+\subsection{Delays on initial Schedule}
+
+This project is separated into three main parts and each part had its own schedule. The first part referred started on April 11 and ended on April 20, while the second on April 24 and ended on April 27. The last part of "General Statistics" was included on second part, but it was never completed, since it was not defined how the design and the whole logic should be, and it stopped being a priority. \par
+
+Finally, my PR on GitHub about this feature was merged on May 22, while on May 24 it was online on BeatHotel Agent Dashboard.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.85]{images/my_projects/Statistics/feature-dashboard-statistics-PR.png}
+	\end{center}
+	\caption{Approved Pull Request}
+\end{figure}
 
 \subsection{Problems occurred}
 
-\section{Project 2}
+During the implementation of the project, there were some problems regarding both procedural and coding issues. First of all, I had to get access to Beat's npm account so as to upload stats package. For this reason, there were procedural delays for getting access and eventually upload the created package. As regards coding issues, creating an npm package for both client and server side is not that easy. You need to get to know babel so as the ES6 code to be transpiled in ES5, which is the language browser understands. Finally, jest created for package's unit testing were not executed when project started using with babel. \par
+
+\subsection{Estimation of Project's impact in the company}
+
+The results of this specific project are important for Beat's Agents. The charts displayed on the dashboard are providing informations showing how rides and GMV are on weekly basis, and how the current week is compared to the previous one. This information is giving a sense of how good business is going and if it is needed something to be done immediately.
+
+\section{Landing page for mpaineis-vgaineis}
+%Landing page for mpaineis-vgaineis.gr competition- production + responsive
 
 \subsection{Description}
 
-\subsection{Best Practices}
+Landing page project is a web site for \href{mpaineis-vgaineis.gr}{mpaineis-vgaineis} competition that is referred to Beat users. Regarding competition, GR Marketing team was about to launch an event in which one participant would win a trip abroad each week. Competition's duration is four weeks in total, and every week there was a different destination starting from 10th of June. My part to this competition was to create a landing page through which every possible user could declare interest in the event, and in this way, to win a trip for two people. \par
 
-\subsection{Schedule}
+More specifically, the landing page was developed in ReactJS. There were designs for the web page provided via Zeplin, a program exporting designs from Adobe XD, Photoshop CC and other projects to CSS code. Thus, it was also used CSS, and the beat-ui theme for matching the designs in each possible device, as described at Appendix 8.2. It is needed to mention that the landing page was based on another project, fact that occurred issues and unused components. In total, I added more than 9,000 pure lines of code, deleted more than 14,000 lines and created about to 10 jsx components, 4 .js files, 15 .css files, while 35 other files were deleted. In general, the landing page had seven main components, the Header, Video Display, Event's description, Application form, Download app, Social media and Footer, as figures 4.4 and 4.5 display. \par
+
+In much more detail, Video display has one clickable button that leads to a video created for the announcement of competition in social media. Additionally, the Application form component includes two inputs, one for email and another for phone, while there is also a checkbox for participant's agreement with the terms and a button for submitting the form. After clicking the submit button, there are two main use cases either user sees a pop up like the one shown in picture 4.6(A) for submit confirmation, or sees one of the checkbox, email or phone input to have red borders. This is happening in case that one of the previously mentioned fields is not correctly completed or not completed at all. Furthermore, due to both front and back are checking the data typed in the form, there is also one more case where the validation passes from front and not from the back-end and a pop up is appeared saying "Oops Something went wrong, try again!". In the first case where the confirmation pop up is displayed to the user, I call a callable function from server side that validate data and then write to Firebase and BigQuery participant's email and phone. \par
+
+\begin{figure}[H]
+	\centering
+	\subfloat[Header \& Video Display]{{\includegraphics[scale=0.07]{images/my_projects/landing_page/header.png} }}%
+	\qquad
+	\subfloat[Description \& Form]{{\includegraphics[scale=0.07]{images/my_projects/landing_page/form.png} }}%
+	\caption{
+		Landing Page for Competition mpaineis-vgaineis
+		\\
+		\textbf{Online: } \url{https://mpaineis-vgaineis.gr/}
+	}
+	\label{fig:example}
+\end{figure}
+
+In figure 4.5 (A), Download App component is divided in two screen's that are going one down to the other in small devices like mobile phones. The second part of the screen has a button thar redirect's user to either ios or android version of the Beat App depending on user's device, code used from \href{https://l.facebook.com/l.php?u=https\%3A\%2F\%2Fstackoverflow.com\%2Fquestions\%2F38241480\%2Fdetect-macos-ios-windows-android-and-linux-os-with-js\%3Ffbclid\%3DIwAR3uoMdkjVLP4sYZwZYNdWZvnU6ZENl_ydezZUYBDrDXcAuMZ7TKWHR1_rs\&h=AT106TjLH1q4m5FXvHR8F5OLOxARMZ07jIj0a5JeCLWiptBV09H1oPWquvUAykdDj_jEyBSwHwd_ELvKjCUjKGg5FkErIz0jFkG_QK8vfVCOOJfxAjxHPj11YPc4-Jf8JFgCjA}{Stackoverflow}. Last but not least, in the bottom of web page there is Social Media component that redirect user to Beat's social media, while Footer component includes competition's term, which is the pop-up shown in picture 4.5 (B).
+
+\begin{figure}[H]
+	\centering
+	\subfloat[Download App]{{\includegraphics[scale=0.07]{images/my_projects/landing_page/app.png} }}%
+	\qquad
+	\subfloat[Social Media \& Footer]{{\includegraphics[scale=0.07]{images/my_projects/landing_page/footer.png} }}%
+	\caption{
+		Landing Page for Competition mpaineis-vgaineis
+		\\
+		\textbf{Online: } \url{https://mpaineis-vgaineis.gr/}
+	}
+	\label{fig:example}
+\end{figure}
+
+Following, there are the two pop-ups one for confirmation when submitting the form and one for terms display.
+
+\begin{figure}[H]
+	\centering
+	\subfloat[PopUp Confirmation]{{\includegraphics[scale=0.3]{images/my_projects/landing_page/popup-confirmation.png} }}%
+	\qquad
+	\subfloat[PopUp of Terms]{{\includegraphics[scale=0.13]{images/my_projects/landing_page/limits.png} }}%
+	\caption{
+		Landing Page PopUps for Competition mpaineis-vgaineis
+		\\
+		\textbf{Online: } \url{https://mpaineis-vgaineis.gr/}
+	}
+	\label{fig:example}
+\end{figure}
+
+\subsection{Best Practices \& Main Tools/Methods Used}
+
+\subsection{Total Hours spend on the Project}
+
+\subsection{Delays on initial Schedule}
 
 \subsection{Problems occurred}
+
+It was based on the top of a totally different project that was not upgraded and had a lot of extra components that had to be deleted.
+
+The designs were changing and pictures, video and term's conditions were not given one working day before competition
+
+display like the designs in each possible device.
+
+\subsection{Estimation of Project's impact in the company}
+
+\section{Input location}
+
+%, refactor Dispatch page and change modal to be responsive- branch feature-input-location_dispatch-driver
+
+Some Hotels need a ride where they pick up a passenger from another destination to take them to the Hotel.
+For B2B, Businesses want to take their customers/workers to from a place (different from Business).
+
+For this reason we want in Beat Hotel Services HQ in Dispatch tab:
+1.	In the front right corner there will be a "+" sign.
+When agents click it, a dialog will open with:
+1.	Staff ride and POS Switch
+2.	Pick up field where agents will fill in the pick up location
+3.	Note to the driver
+4.	Select a specific driver
+
+This dialog we also want to exist in Live Map Tab, when agents do "New direct dispatch" and the field of the driver will be autocompleted with the driver that agents selected. (14/06)
+-
+On hovering over the "Dispatch" tab in Time of Request it will show the pickup location (if it is different from the Hotel)(18/06)
+
+%New Dispatch Tab: Πλέον στο "Dispatch" Tab για να γίνει request taxi σε κάποιο ξενοδοχείο, θα πρέπει να πατηθεί το πράσαινο κουμπί "+" στο επάνω δεξί μερός του κάθε ξενοδοχείου. 
+
+%Εφόσον πατηθεί το πράσινο κουμπί "+" μπορείτε να δείτε ολές τις διαθέσιμες επιλογές που μπορούν να ενεργοποιηθούν για την διαδρομή. (Staff Ride, POS, Note to Driver). Η επιπλέον επιλογή που σας δίνετε μέσω του "Dispatch" Tab, είναι ότι για κάθε αίτημα ξενοδοχείου για ταξί θα μπορείτε να αλλάξετε το "pickup location".  By default, όταν πατηθεί το πράσινο κουμπί "+", το pickup location είναι το επιλεγμένο ξενοδοχείο. 
+
+%Σε περίπτωση που θέλετε να αλλάξετε το pickup location μπορείτε να πληκτρολογήσετε στην μπάρα "Pickup" το pickup location που επιθυμείτε και να επιλέξετε υποχρεωτικά κάποιο pickup από τις διαθέσιμες επιλογές που εμφανίζονται σε μορφή dropdown. Στην συνέχεια πατάτε κανονικά το "Dispatch Driver" όπως πριν.
+
+%Εδώ να τονιστεί ότι η όλη λειτουργία του Dispatch παραμένει ακριβώς η ίδια. Επομένως με το που πατηθεί "Dispatch Dirver", η διαδρομή του ξενοδοχείου και όλες οι πληροφορίες για εκείνη εμφανίζεται κάτω από το ξενοδοχείου (όπως ακριβώς ήταν πριν).
+
+%Σε περίπτωση που κάποιο από τα rides ενός ξενοδοχείου είναι unfullfiled και επιθυμείτε να κάνετε Direct Manual Dispatch από τον χάρτη αλλά το ride αυτό έχει διαφορετικό pickup location από το ξενοδοχείο, θα δείτε το διαφορετικό pickup location σέρνοντας το ποντίκι σας πάνω στην γραμμή του συγκεκριμένο ride όπου θέλετε να κάνετε το Direct Manual Dispatch. 
+
+%'Υστερα μπορείτε να πάτε στον χάρτη κοντά στο διαφoρετικό pickup location, να βρείτε έναν οδηγό εκεί κοντά και να κάνετε "Assign Pending Ride". Σε αυτό το σημείο για να βρείτε ποιο ride αντιστοιχει στο ride με το διαφορετικό pickup location μπορείτε να το βρείτε βάση του time of request που επιλέγετε. (Οι δύο κυκλωμένες ώρες θα πρέπει να είναι ίδιες)
+
+%Από εκεί και πέρα η διαδικασία είναι ίδια όπως ακριβώς και πριν.
+
+\subsection{Description}
+
+\subsection{Best Practices \& Main Tools/Methods Used}
+
+\subsection{Total Hours spend on the Project}
+
+\subsection{Delays on initial Schedule}
+
+\subsection{Problems occurred}
+
+\subsection{Estimation of Project's impact in the company}
 
 %6 pages 2 per projects

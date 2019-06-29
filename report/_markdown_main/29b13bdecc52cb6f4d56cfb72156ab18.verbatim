@@ -1,0 +1,80 @@
+# Install
+
+```
+$ npm install @freenow-gr/stats$
+```
+or
+```
+$ yarn add @freenow-gr/stats$
+```
+
+# Usage
+
+```
+const getStats = require("@freenow-gr/stats");
+
+const validMockedData = {
+    y2019: {
+        m3: {
+            d12: {
+                h15: {
+                    CancelledCounter: 1,
+                    CompletedCounter: 3,
+                    revenueSum: 258.47,
+                },
+                h16: {
+                    CancelledCounter: 4,
+                    CompletedCounter: 1,
+                    revenueSum: 3.47,
+                },
+            },
+            d13: {
+                h10: {
+                    CancelledCounter: 3,
+                    CompletedCounter: 2,
+                    revenueSum: 8.47,
+                },
+            },
+        },
+    },
+};
+const startingDate = new Date('2018-02-10T15:45:00');
+const endingDate = new Date('2018-02-12T15:45:00');
+```
+
+In order to run you need to have an object like this:
+```
+const args = {
+    statsObject:validMockedData,
+    startTimestamp:startingDate,
+    endTimestamp:endingDate,
+    kpi:KPI.GMV,
+    resolution:resolutions.HOUR
+}
+
+let result = groupStatistics(args);
+console.log(result);
+//y2018: {
+    //      m2: {
+        //          d12: {
+            //              h15: {
+                //                  revenueSum: 258.47,
+                //              },
+            //          },
+        //      },
+    //  }
+
+```
+### Data used to groupStatistics function
+
+Kpi options are one of the following values:
+* GMV
+* RIDES_COMPLETED
+* RIDES_CANCELLED
+
+Resolution options are one of the following values:
+* YEAR
+* MONTH
+* WEEK
+* DAY
+* HOUR
