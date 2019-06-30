@@ -5,14 +5,27 @@
 
 \label{Chapter3}
 
-During my internship, I took part in quite a few projects that were mostly related to Beat Hotels product, either bugs resolved or entirely new features created, or Greek Marketing’s requirements. All of these projects will be analyzed in this chapter, expect of the ones of Chapter \ref{Chapter4} that will just mentioned so as to avoid repetition.
-
-\section{Project 1: Price Estimator- Rides for Approval}
-
-BeatHotels is a totally different product than Beat and a newly introduced one as described in the previous Chapters. For this reason, this new product is combined with a different driver app and a dashboard used from agents. Agents use the dashboard in order to control rides made through BeatHotels App and even start a ride or cancel one if it is needed. This new product does not have any price estimator for the rides made which means that a driver could theoretically add. By the term “price estimator”, we mean that 
+During my internship, I participated in quite a few projects that were mostly related to Beat Hotels product, either bugs resolved or entirely new features created, or Greek Marketing’s requirements. All of these projects will be analyzed in this chapter, expect the ones of Chapter \ref{Chapter4} that will just mentioned so as to avoid repetition.
 
 \section{Project 2: Geo - Npm Package}
 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.45]{images/my_projects/price_estimator.png}
+	\end{center}
+	\caption{Approved Pull Request}
+\end{figure}
+
+\section{Project 1: Price Estimator- Rides for Approval}
+
+BeatHotel is a totally different product than Beat and a newly introduced one as described in the previous Chapters. For this reason, this new product is combined with a different driver app and a dashboard used by agents, Beat's employees. Agents use the dashboard in order to control rides made through BeatHotel App, start a ride or cancel one if it is needed. This new product does not have any price estimator for the rides made which means that a driver could theoretically add any amount desirable. \par
+
+The project “price estimator” was created for preventing any fraud occurred by drivers. The aim of this project was to estimate the price of a completed ride and compare this price with the actually declared one. In this way, every completed ride is checked  and if it does not pass the validation, it remains as Ride for Approval, so as Agents to check the validate of price gained. \par
+
+This project was the first project ever assigned to me and to one more intern. Our role to this project was to create in Node.js a function for calculating the price of a completed ride based on the data found in database and another function fo validating if the result is approximately equal to the ride's price. We need to mention that every five seconds, each driver sends its location (latitude and longitude), a timestamp (time of the data sent) and other information. So, we used these data gathered in firebase and by using the geo package mentioned earlier and rules of how taxi pricing is in Greece, we managed to get an estimation of the ride. Afterwards, we created one more function for checking the real price with the estimated one. \par
+
+The project lasted about two weeks and it was a great addition to BeatHotel HQ service. We need to clarify that for about a year the service did not have any commissions gained from the driver and that's why it was not a priority at first. Because of this additional feature, Beat's commission is real scenario. \par 
 
 \section{Project 3: Statistics (analyzed in next Chapter)}
 
@@ -48,16 +61,16 @@ Remove all warnings from console (generated from ESLint) (22/05/19 asana)
 Add button for unblocking dispatching status-production (PR)
 
 
-\section{Project 10: Landing page mpaineis-vgaineis}
-Landing page for mpaineis-vgaineis.gr competition- production + responsive
+\section{Project 10: Landing page for mpaineis-vgaineis (analyzed in next Chapter)}
+
+Landing page for mpaineis-vgaineis is a project referred to the development of a web site for \url{mpaineis-vgaineis.gr} competition of Beat. More specifically, GR Marketing team launched an event in which every week one participant would win a trip abroad. The competition lasted four weeks, and every week there was a different destination. My part to this event was to create the landing page through which every possible user could declare interest in the event, and in this way, to win a trip in one of the destinations. So, I created a responsive to all devices web page, that includes a form for users to declare their interest. The landing page will be online until 7th of June. \par
 
 \section{Project 11: Statistics in Dashboard - "Forecast"}
 In Statics in Dashboard Tab, we want in the diagram to be completed for the rest hours of the day that we don't have yet data, from the rides and gmv of the previous week. (18/06)
 
-\section{Project 12: Input location}
-%, refactor Dispatch page and change modal to be responsive- branch feature-input-location_dispatch-driver
+\section{Project 12: Input location (analyzed in next Chapter)}
 
-%Small brief
+BeatHotel is generally a B2B service that aims to fulfill the needs of hotels for a virtual taxi queue. So, the service's dashboards, which is the only way Beat's Agents and Hotels to request for a taxi, used for calling a cub to only one pick-up location, the requested Hotel. However, as the business grows, travel agencies, that were part of the system as well, and some hotels needed to fulfill rides that are having different than Hotel's pick up locations. For this reason, this project occurred and I needed to refactor the Dispatch page, change modal so as to be responsive and add an input for typing any possible different pick-up location. \par
 
 \section{Project 13: Zoom to hotel and driver}
 
