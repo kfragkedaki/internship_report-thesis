@@ -8,7 +8,7 @@
 \section{Statistics}
 
 \subsection{Description}
-As described in the previous Chapter, "Statistics" project is an external feature in Agent's dashboard that reveals total rides and Gross Merchandise Volume (GMV) gained from BeatHotel service. More specifically, there were added charts in the BeatHotel's web application that present data based on what KPI, resolution, and period of time will be chosen by Agents. The term KPI is referred to either Completed Rides, or GMV, or Cancelled Rides, while term "resolution" applies to yearly, monthly, weekly, daily or even hourly analyses of data. In the chart, it is also compared to the given period's data with the previous week's or year's data. \par
+As described in the previous Chapter, the "Statistics" project is an external feature in Agent's dashboard that reveals total rides and Gross Merchandise Volume (GMV) gained from BeatHotel service. More specifically, there were added charts in the BeatHotel's web application that present data based on what KPI, resolution, and period of time will be chosen by Agents. The term KPI is referred to either Completed Rides, or GMV, or Cancelled Rides, while term "resolution" applies to yearly, monthly, weekly, daily or even hourly analyses of data. In the chart, it is also compared to the given period's data with the previous week's or year's data. \par
 
 \subsection{Deliverables}
 This project had three main deliverables so as to be completed, npm package creation, customized Statistics, and General Statistics. \par
@@ -16,11 +16,11 @@ This project had three main deliverables so as to be completed, npm package crea
 \subsubsection{Npm Package}
 The first deliverable is the creation of an npm package as described in Appendix 8.1, showing the project's ReadME.md file. The package can be used in both front and back-end applications, and it returns one function and two objects, which are the KPI and resolutions object. \par 
 As regards the function, it receives five arguments. The first argument given, named "statsObject", is an object of the gathered data saved in firebase, BeatHotel's real-time database. The other two arguments are the starting and ending timestamps of the desirable data's period of time, while the remain ones determine the KPI and resolution of the received data. The purpose of this function is to return an object that format data received from the database based on its parameters. \par
-For privacy reasons, it is not possible to cite the code written. However, it can be mentioned that code was developed in ES6 JavaScript, consists of 303 lines of code, both comments, and pure code, and it includes eight functions in total. Moreover, there were created unit tests in Jest and are in total of 395 lines examining ten different use cases. Code is using enlist-styling and includes babel in its webpack configuration so as to be used in both front-end and back end projects if it is needed. \par
+For privacy reasons, it is not possible to cite the code written. However, it can be mentioned that code was developed in ES6 JavaScript, consists of 303 lines of code, both comments and pure code, and it includes eight functions in total. Moreover, there were created unit tests in Jest and are in total 395 lines examining ten different use cases. Code is using enlist-styling and includes babel in its webpack configuration so as to be used in both front-end and back end projects if it is needed. \par
 
 \subsubsection{Customized Statistics \& Dashboard KPIs}
 After the npm package creation, I had to present the data on the Agent's web application. So, I created and added on tab Dashboard of BeatHotel web page, two customized charts and two more cards that reveal this week's Rides and GMV, as shown in the red square of figure 4.1.   \par
-Regarding the customized charts shown, there is one for showing rides per day and one for GMV. Both charts have two lines. The blue line is created based on the current week's data, while the gray one by last week's. Generally, their purpose is to compare this and last week's rides and GMV. For this reason, a week on week (WoW) percentage is shown at the top left of the charts which is referred to as this comparison. Percentage representation is also changing color, from green to red, and arrow's direction, from up to down, if needed. Last but not least, we need to mention that charts are updated on refresh, so the timer down left displays when the data were lastly updated. \par 
+Regarding the customized charts shown, there is one for showing rides per day and one for GMV. Both charts have two lines. The blue line is created based on the current week's data, while the gray one by last week's. Generally, their purpose is to compare this and last week's rides and GMV. For this reason, a week on week (WoW) percentage is shown at the top left of the charts which is referred to this comparison. Percentage representation is also changing color, from green to red, and arrow's direction, from up to down, if needed. Last but not least, we need to mention that charts are updated on refresh, so the timer down left displays when the data were lastly updated. \par 
 Additionally, I was requested to add two more cards, one for Rides and one for GMV KPI. These cards are referred to data gathered from the beginning of the current week (Monday 00:00) until the day and time Agent is using the dashboard. Furthermore, they demonstrate how many Rides or GMV BeatHotel service had the last seven days passed. One last detail about cards is that the color of icons, in the picture shown as green, is changing to either green, orange or red depending on the WoW percentage described earlier. \par
 
 \begin{figure}[H]
@@ -48,7 +48,7 @@ In figure 4.2, it is shown how "General Statistics" look like. However, we need 
 
 \subsection{Best Practices \& Main Tools/Methods Used}
 
-Several tools and practices taught in quite a few courses in Management Science and Technology Department have been used for fulfilling this project's needs. More specifically, JavaScript and other web development tools taught during the Information Systems Implementation \& Architecture course of the 5th semester, and Internet \& Cloud Application Development course of the 7th semester was the most useful knowledge gained. Furthermore, the GitHub usage required for the project was given from the 6th semester's course in Software Engineering in Practice. \par
+Several tools and practices taught in quite a few courses in Management Science and Technology Department have been used to fulfilling this project's needs. More specifically, JavaScript and other web development tools taught during the Information Systems Implementation \& Architecture course of the 5th semester, and Internet \& Cloud Application Development course of the 7th semester was the most useful knowledge gained. Furthermore, the GitHub usage required for the project was given from the 6th semester's course in Software Engineering in Practice. \par
 
 \subsection{Total Hours spend on the Project}
 
@@ -56,7 +56,7 @@ This project consists of both back and front end implementations, and it has to 
 
 \subsection{Delays on Initial Schedule}
 
-This project is separated into three main parts and each part had its own schedule. The first part referred started on April 11 and ended on April 20, while the second on April 24 and ended on April 27. The last part of "General Statistics" was included on the second part, but it was never completed, since it was not defined how the design and the whole logic should be, and it stopped being a priority. \par
+This project is separated into three main parts and each part had its own schedule. The first part referred started on April 11 and ended on April 20, while the second on April 24 and ended on April 27. The last part of "General Statistics" was included in the second part, but it was never completed, since it was not defined how the design and the whole logic should be, and it stopped being a priority. \par
 
 Finally, my PR on GitHub about this feature was merged on May 22, while on May 24 it was online on BeatHotel Agent Dashboard.
 
@@ -69,7 +69,7 @@ Finally, my PR on GitHub about this feature was merged on May 22, while on May 2
 
 \subsection{Problems occurred}
 
-During the implementation of the project, there were some problems regarding both procedural and coding issues. First of all, I had to get access to Beat's npm account so as to upload stats package. For this reason, there were procedural delays for getting access and eventually upload the created package. As regards coding issues, creating an npm package for both client and server side is not that easy. You need to get to know babel so as the ES6 code to be transpiled in ES5, which is the language browser understands. Finally, jest created for package's unit testing was not executed when the project started using with babel. \par
+During the implementation of the project, there were some problems regarding both procedural and coding issues. First of all, I had to get access to Beat's npm account so as to upload stats package. For this reason, there were procedural delays for getting access and eventually upload the created package. As regards coding issues, creating an npm package for both client and server side is not that easy. You need to get to know babel so as the ES6 code to be transpiled in ES5, which is the language browser understands. Finally, jest created for the package's unit testing was not executed when the project started using with babel. \par
 
 \subsection{Estimation of Project's impact in the company}
 
@@ -79,7 +79,7 @@ The results of this specific project are important for Beat's Agents. The charts
 
 \subsection{Description}
 
-Landing page project is a web site for \href{mpaineis-vgaineis.gr}{mpaineis-vgaineis} competition which is referred to Beat users. Regarding the competition, GR Marketing team launched an event in which every week one participant would win a trip abroad. The competition lasted four weeks in total, and every week there was a different destination starting from the 10th of June. My part to this competition was to create a landing page through which every possible user could declare interest in the event, and in this way, to win a trip for two people. \par
+Landing page project is a web site for \href{mpaineis-vgaineis.gr}{mpaineis-vgaineis} competition which is referred to Beat users. Regarding the competition, GR Marketing team launched an event in which every week one participant would win a trip abroad. The competition lasted four weeks in total, and every week there was a different destination starting from the 10th of June. My role in this competition was to create a landing page through which every possible user could declare interest in the event, and in this way, to win a trip for two people. \par
 
 In much more detail, the landing page was developed in ReactJS. There were designs for the web page provided via Zeplin, a program exporting designs from Adobe XD, Photoshop CC, and other projects to CSS code. Thus, it was used CSS, and the beat-ui theme for matching the designs in each possible device, as described in Appendix 8.2. It is needed to mention that the landing page was based on another project, a fact that occurred issues and unused components. In total, I added more than 9,000 pure lines of code, deleted more than 14,000 lines. More specifically, about to 10 jsx components, 4 .js files, 15 .css files were created, while 35 other files were deleted. In general, the landing page had seven main components, the Header, Video Display, Event's description, Application form, Download app, Social media, Footer, Term and Pop-up Configuration, as figures 4.4, 4.5 and 4.6 display. \par
 
@@ -160,9 +160,9 @@ Figure 4.7 reveals the differences between the old (A) and the new (B) dispatch 
 
 \begin{figure}[H]
 	\centering
-	\subfloat[Old Dispatch Tab]{{\includegraphics[scale=0.25]{images/my_projects/input/input-location-dashboard-old.png} }}%
+	\subfloat[Old Dispatch Tab]{{\includegraphics[scale=0.23]{images/my_projects/input/input-location-dashboard-old.png} }}%
 	\qquad
-	\subfloat[New Dispatch Tab]{{\includegraphics[scale=0.37]{images/my_projects/input/input-location-dashboard-new.png} }}%
+	\subfloat[New Dispatch Tab]{{\includegraphics[scale=0.35]{images/my_projects/input/input-location-dashboard-new.png} }}%
 	\caption{
 		Reconstruct Dispatch Components for requesting a taxi from Agent's Dashboard
 	}
